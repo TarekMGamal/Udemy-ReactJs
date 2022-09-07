@@ -1,0 +1,14 @@
+.exploreButton {
+  border-style: solid;
+  border-color: black;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background-color: lightgray;
+}
+
+.description {
+  padding: 10px;
+}

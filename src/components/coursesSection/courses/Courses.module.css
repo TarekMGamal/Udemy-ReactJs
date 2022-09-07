@@ -1,0 +1,13 @@
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  border-style: groove;
+  border-color: black;
+  margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .courses {
+    flex-direction: column;
+  }
+}

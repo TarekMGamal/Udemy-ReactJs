@@ -1,0 +1,19 @@
+.course {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 19%;
+  max-width: fit-content;
+}
+
+.courseImage {
+  width: 100%;
+  object-fit: cover;
+  max-width: fit-content;
+}
+
+.ratingSpan {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
