@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomePage from "./components/homePage/HomePage";
 import NavBarSection from "./components/navbarSection/NavBarSection";
@@ -61,12 +62,24 @@ function App() {
   return (
     <>
       <NavBarSection />
-      <HomePage
-        title={title}
-        description={description}
-        exploreButtonContent={exploreButtonContent}
-        courses={courses}
-      />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              title={title}
+              description={description}
+              exploreButtonContent={exploreButtonContent}
+              courses={courses}
+            />
+          }
+        ></Route>
+        <Route
+          path="/course/:courseID"
+          element={<div>The course is not available</div>}
+        ></Route>
+      </Routes>
     </>
   );
 }
