@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomePage from "./components/homePage/HomePage";
+import CoursePage from "./components/coursePage/CoursePage";
 import NavBarSection from "./components/navbarSection/NavBarSection";
 
 let title = "Expand your career opportunities with Python";
@@ -77,7 +78,7 @@ function App() {
         ></Route>
         <Route
           path="/course/:courseID"
-          element={<div>The course is not available</div>}
+          element={<CoursePage />}
         ></Route>
       </Routes>
     </>
