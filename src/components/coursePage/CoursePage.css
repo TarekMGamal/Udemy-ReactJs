@@ -1,0 +1,9 @@
+.pageBody {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  align-items: center;
+  width: 600px;
+  margin-left: 10em;
+  margin-top: 2em;
+}
