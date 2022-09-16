@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { DataProvider } from "./contexts/dataContext";
+import { DataProvider } from "./contexts/DataContext";
 import "./App.css";
 import HomePage from "./components/homePage/HomePage";
 import CoursePage from "./components/coursePage/CoursePage";
