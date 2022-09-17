@@ -17,7 +17,7 @@ function App() {
     });
 
   return (
-    <DataProvider data={data}>
+    <DataProvider value={data}>
       <NavBarSection />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>

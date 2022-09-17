@@ -3,7 +3,7 @@ import { CheckLg } from "react-bootstrap-icons";
 
 function Overview({ overviewData }) {
   return (
-    <div class="overviewSection">
+    <div className="overviewSection">
       <h5>What you'll learn</h5>
       <div>
         <CheckLg />
