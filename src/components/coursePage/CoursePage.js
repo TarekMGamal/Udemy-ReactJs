@@ -10,13 +10,13 @@ import "./CoursePage.css";
 function CoursePage() {
   return (
     <>
-      <CourseCard courseCardData={{}} />
-      <CourseDescription courseData={{}} />
+      <CourseCard />
+      <CourseDescription />
       <div className="pageBody">
-        <Overview overviewData={{}} />
-        <Curriculum curriculumData={{}} />
-        <Instructor instructorData={{}} />
-        <Reviews reviewsData={{}} />
+        <Overview />
+        <Curriculum />
+        <Instructor />
+        <Reviews />
       </div>
       <Footer />
     </>

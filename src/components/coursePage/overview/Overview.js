@@ -1,21 +1,24 @@
 import "./Overview.css";
 import { CheckLg } from "react-bootstrap-icons";
+import { DataContext } from "../../../contexts/DataContext";
+import { useContext } from "react";
 
-function Overview({ overviewData }) {
+function Overview() {
+  let courseData = useContext(DataContext);
+  courseData = courseData.coursePage;
+  let overview = courseData.overview;
+
   return (
     <div className="overviewSection">
       <h5>What you'll learn</h5>
       <div>
-        <CheckLg />
-        {overviewData.overview1} Create their own Python Programs
-      </div>
-      <div>
-        <CheckLg /> {overviewData.overview2} Become an experienced Python
-        Programmer
-      </div>
-      <div>
-        <CheckLg /> {overviewData.overview3} Parse the Web and Create their own
-        Games
+        {overview.map((element) => {
+          return (
+            <div>
+              <CheckLg /> {element}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

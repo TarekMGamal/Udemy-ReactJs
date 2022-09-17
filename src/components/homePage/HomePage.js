@@ -1,16 +1,11 @@
 import CoursesSection from "./coursesSection/CoursesSection";
 import HeaderSection from "./headerSection/HeaderSection";
 
-function HomePage({ title, description, exploreButtonContent, courses }) {
+function HomePage() {
   return (
     <>
       <HeaderSection />
-      <CoursesSection
-        title={title}
-        description={description}
-        exploreButtonContent={exploreButtonContent}
-        courses={courses}
-      />
+      <CoursesSection />
     </>
   );
 }

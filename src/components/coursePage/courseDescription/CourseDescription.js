@@ -1,7 +1,19 @@
 import { InfoCircleFill, Globe, BadgeCcFill } from "react-bootstrap-icons";
+import ReactStars from "react-rating-stars-component";
 import "./CourseDescription.css";
+import { DataContext } from "../../../contexts/DataContext";
+import { useContext } from "react";
 
-function CourseDescription({ courseData }) {
+function CourseDescription() {
+  let courseData = useContext(DataContext);
+  courseData = courseData.coursePage;
+  let instructors = courseData.instructors;
+  let instructorsString = "";
+  for (let i in instructors) {
+    instructorsString += instructors[i]["name"];
+    if (i < instructors.length - 1) instructorsString += ", ";
+  }
+
   return (
     <div className="courseHeader">
       <div className="wrapper">
@@ -13,30 +25,26 @@ function CourseDescription({ courseData }) {
             courseData.path3}
         </div>
         <h4>
-          {courseData.title} Learn Python: The Complete Python Programming
+          {courseData.title}
           Course
         </h4>
-        <p>
-          {courseData.headline} Learn A-Z everything about Python, from the
-          basics, to advanced topics like Python GUI, Python Data Analysis, and
-          more!
-        </p>
+        <p>{courseData.headline}</p>
         <div className="otherData">
-          <div>{courseData.rating}</div>
-          <div>{courseData.people}</div>
+          <div>{courseData.stars}</div>
+          <ReactStars value={courseData.stars} size={20} edit={false} />
+          <div>({courseData.ratings} ratings)</div>
+          <div>{courseData.students} students</div>
         </div>
-        <div>
-          Created by <span>{courseData.instructors}</span>
-        </div>
+        <div>Created by {instructorsString}</div>
         <div className="otherData">
           <div>
-            <InfoCircleFill /> Last updated {courseData.lastUpdateDate}
+            <InfoCircleFill /> Last updated {courseData.lastUpdated}
           </div>
           <div>
             <Globe /> {courseData.lang}
           </div>
           <div>
-            <BadgeCcFill /> {courseData.captionLang}
+            <BadgeCcFill /> {courseData.cc}
           </div>
         </div>
       </div>

@@ -7,13 +7,18 @@ import {
   CardText,
 } from "react-bootstrap-icons";
 import "./CourseCard.css";
+import { DataContext } from "../../../contexts/DataContext";
+import { useContext } from "react";
 
-function CourseCard({ courseCardData }) {
+function CourseCard() {
+  let courseData = useContext(DataContext);
+  courseData = courseData.coursePage;
+
   return (
     <div className="courseCard">
-      <img src={courseCardData.image} alt="course" className="courseCardImg" />
+      <img src={courseData.image} alt="course" className="courseCardImg" />
       <div className="courseCardBody">
-        <h3>E£{courseCardData.price}</h3>
+        <h3>E£{courseData.price}</h3>
         <button className="addCartBtn">Add to cart</button>
         <button>Buy now</button>
         <div className="d-flex justify-content-center">
@@ -23,15 +28,15 @@ function CourseCard({ courseCardData }) {
           <h4>This course includes:</h4>
           <div>
             <PlayBtn />
-            {courseCardData.hours + " on-demand video"}
+            {courseData.hours + " on-demand video"}
           </div>
           <div>
             <FileEarmark />
-            {courseCardData.articles + " articles"}
+            {courseData.articles + " articles"}
           </div>
           <div>
             <Download />
-            {courseCardData.recources + " downloadable resources"}
+            {courseData.recources + " downloadable resources"}
           </div>
           <div>
             <Infinity />

@@ -1,18 +1,27 @@
 import React from "react";
 import Courses from "./courses/Courses";
 import "./CoursesSection.css";
+import { DataContext } from "../../../contexts/DataContext";
+import { useContext } from "react";
 
-function CoursesSection({ title, description, exploreButtonContent, courses }) {
-  return (
-    <div>
-      <div className="description">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <button className="exploreButton">{exploreButtonContent}</button>
+function CoursesSection() {
+  let CourseData = useContext(DataContext);
+  CourseData = CourseData.homePage;
+
+  if (CourseData === undefined) {
+    return <div>Loading</div>;
+  } else {
+    return (
+      <div>
+        <div className="description">
+          <h3>{CourseData.header}</h3>
+          <p>{CourseData.description}</p>
+          <button className="exploreButton">Explore {CourseData.title}</button>
+        </div>
+        <Courses />
       </div>
-      <Courses courses={courses} />
-    </div>
-  );
+    );
+  }
 }
 
 export default CoursesSection;
