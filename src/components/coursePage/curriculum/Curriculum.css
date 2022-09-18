@@ -26,6 +26,16 @@
   border-color: brown;
 }
 
+.showMoreButtonDescription {
+  border: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.showMoreButtonDescription:hover {
+  color: purple;
+}
+
 .courseContentHeader {
   align-self: flex-start;
   font-weight: bold;

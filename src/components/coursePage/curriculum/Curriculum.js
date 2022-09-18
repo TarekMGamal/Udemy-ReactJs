@@ -3,6 +3,7 @@ import "./Curriculum.css";
 import { DataContext } from "../../../contexts/DataContext";
 import { useContext, useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
+import { Text } from "react";
 
 function Curriculum() {
   let courseData = useContext(DataContext);
@@ -26,6 +27,7 @@ function Curriculum() {
 
   const [open, setOpen] = useState(false);
   const [expandAll, setExpandAll] = useState(false);
+  const [openDescription, setOpenDescription] = useState(false);
 
   if (courseData === undefined) {
     return <div>Loading</div>;
@@ -78,6 +80,21 @@ function Curriculum() {
             {open ? "show less" : "show more"}
           </button>
         </div>
+        <h4 className="courseContentHeader">Description</h4>
+        <p>
+          {openDescription ? "" : courseData.description.substring(0, 1000) + "..."}
+        </p>
+        <Collapse in={openDescription}>
+          <p>{courseData.description}</p>
+        </Collapse>
+        <button
+          className="showMoreButtonDescription"
+          onClick={() => {
+            setOpenDescription(!openDescription);
+          }}
+        >
+          {openDescription ? "show less" : "show more"}
+        </button>
       </>
     );
   }
