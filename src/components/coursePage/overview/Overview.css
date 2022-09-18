@@ -1,1 +1,5 @@
-
+.overviewSection {
+  border: groove;
+  width: 100%;
+  padding: 20px;
+}
