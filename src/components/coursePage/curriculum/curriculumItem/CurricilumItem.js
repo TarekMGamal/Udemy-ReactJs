@@ -2,10 +2,10 @@ import { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
 import "./CurricilumItem.css";
 import { PlayCircleFill, ChevronDown, ChevronUp } from "react-bootstrap-icons";
+
 function CurriculumItem({ data, expandState }) {
   const [openLectures, setOpenLectures] = useState(false);
   let lectures = data.lectures;
-  console.log(expandState);
 
   return (
     <>

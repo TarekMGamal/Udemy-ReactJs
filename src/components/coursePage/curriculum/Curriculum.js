@@ -3,7 +3,6 @@ import "./Curriculum.css";
 import { DataContext } from "../../../contexts/DataContext";
 import { useContext, useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
-import { Text } from "react";
 
 function Curriculum() {
   let courseData = useContext(DataContext);
