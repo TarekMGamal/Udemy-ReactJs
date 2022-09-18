@@ -1,4 +1,3 @@
-import NavBarSection from "../navbarSection/NavBarSection";
 import CourseCard from "./courseCard/CourseCard";
 import CourseDescription from "./courseDescription/CourseDescription";
 import Curriculum from "./curriculum/Curriculum";
@@ -11,7 +10,6 @@ import "./CoursePage.css";
 function CoursePage() {
   return (
     <>
-      <NavBarSection />
       <CourseCard />
       <CourseDescription />
       <div className="pageBody">
