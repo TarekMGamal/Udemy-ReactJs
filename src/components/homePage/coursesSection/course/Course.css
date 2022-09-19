@@ -4,6 +4,7 @@
   flex-direction: column;
   flex: 1 0 19%;
   max-width: fit-content;
+  text-decoration: none;
 }
 
 .courseImage {

@@ -1,0 +1,12 @@
+.instructorsContainer {
+  padding-bottom: 50px;
+}
+
+.instructorsContainer img {
+  width: 30%;
+  margin-top: 10px;
+}
+
+.instructorImage {
+  border-radius: 100px;
+}

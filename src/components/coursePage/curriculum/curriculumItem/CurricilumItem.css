@@ -1,0 +1,22 @@
+.section {
+  border: groove;
+  border-bottom: none;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.icon {
+  padding-right: 10px;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.expandedSection {
+  border: groove;
+  border-bottom: none;
+  padding: 10px;
+}

@@ -1,0 +1,29 @@
+.courseHeader {
+  background-color: #1c1d1f;
+  color: white;
+  padding: 1em 1em 1em 5em;
+}
+
+.otherData {
+  display: flex;
+  justify-content: space-between;
+  width: 25em;
+}
+
+.wrapper {
+  width: 45em;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    width: auto;
+  }
+
+  .courseHeader {
+    padding: 2em;
+  }
+
+  .otherData {
+    width: auto;
+  }
+}
