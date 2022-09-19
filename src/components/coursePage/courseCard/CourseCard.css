@@ -1,10 +1,10 @@
 .courseCard {
   position: absolute;
   background-color: white;
-  top: 100px;
-  right: 8em;
+  top: 6em;
+  right: 5em;
   z-index: 10;
-  width: 350px;
+  width: 300px;
   padding: 2px;
   border: solid;
 }
@@ -40,4 +40,10 @@
 
 .courseCardFooter {
   margin: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+  .courseCard {
+    display: none;
+  }
 }
