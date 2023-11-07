@@ -1,0 +1,56 @@
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  background-color: floralwhite;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left {
+  display: inline;
+  padding-bottom: 10px;
+}
+
+.showMoreButton {
+  background-color: floralwhite;
+  border: groove;
+  border-color: brown;
+}
+
+.showMoreButtonDescription {
+  border: none;
+  color: blue;
+  background-color: white;
+  font-weight: bold;
+}
+
+.showMoreButtonDescription:hover {
+  color: purple;
+}
+
+.courseContentHeader {
+  align-self: flex-start;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.expandAllButton {
+  border: none;
+  background-color: white;
+  color: blue;
+  font-weight: bold;
+}
+
+.expandAllButton:hover {
+  color: purple;
+}
